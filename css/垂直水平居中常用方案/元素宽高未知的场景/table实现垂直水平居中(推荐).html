@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>table实现垂直水平居中(推荐)</title>
+    <style>
+        /* table垂直水平居中方案，是万金油方案，适用性极强，也没有兼容性问题；
+        缺陷是会增加冗余的HTML结构。 */
+
+        .vertical {
+            width: 100%;
+            height: 100%;
+            display: table;
+        }
+
+        .box-container {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="vertical">
+        <div class="box-container">
+            <span>这是要垂直居中的元素</span>
+        </div>
+    </div>
+</body>
+
+</html>
