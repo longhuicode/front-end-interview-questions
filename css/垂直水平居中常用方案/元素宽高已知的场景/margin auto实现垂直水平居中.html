@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>margin auto实现垂直水平居中</title>
+    <style>
+        /* 特别适合自身有宽高的元素，比如图片等；但是对于其他元素，仍然需要显式设置宽高。 */
+
+        .vertical {
+            width: 100%;
+            height: 500px;
+            position: relative;
+        }
+
+        .box1 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .box2 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+<div class="vertical">
+    <img class="box1" src="http://placehold.it/100x100" alt="这是要垂直居中的元素">
+</div>
+<div class="vertical">
+    <span class="box2">这是要垂直居中的元素</span>
+</div>
+</body>
+
+</html>
