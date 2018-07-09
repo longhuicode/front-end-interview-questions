@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>transform 实现垂直水平居中(推荐)</title>
+    <style>
+        /* transform垂直水平居中方案，同样也是万金油方案，尤其适合移动端；缺陷是只支持IE9及以上的浏览器。 */
+
+        .vertical {
+            width: 100%;
+            height: 500px;
+            position: relative;
+        }
+
+        .box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="vertical">
+        <span class="box">这是要垂直居中的元素</span>
+    </div>
+</body>
+
+</html>
