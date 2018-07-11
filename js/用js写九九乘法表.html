@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>用js写九九乘法表</title>
+</head>
+<body>
+<script>
+    // for 循环代码实现
+    document.write("<table width='600' border='1'>");
+    for (var i = 1; i <= 9; i++) {
+        document.write("<tr>");
+        for (var j = 1; j <= i; j++) {
+            document.write("<td>" + j + "*" + i + "=" + i * j + "</td>");
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+
+    // while 循环代码实现
+    document.write("<table width='600' border='1'>");
+    var i = 1;
+    while (i <= 9) {
+        document.write("<tr>");
+        var j = 1;
+        while (j <= i) {
+            document.write("<td>" + j + "*" + i + "=" + i * j + "</td>");
+            j++;
+        }
+        document.write("</tr>");
+        i++;
+    }
+    document.write("</table>");
+
+    // do-while 循环代码实现
+    document.write("<table width='600' border='1'>");
+    var i = 1;
+    do {
+        document.write("<tr>");
+        var j = 1;
+        do {
+            document.write("<td>" + j + "*" + i + "=" + j * i + "</td>");
+            j++;
+        } while (j <= i);
+        document.write("</tr>");
+        i++;
+    } while (i <= 9);
+    document.write("</table>");
+</script>
+</body>
+</html>
